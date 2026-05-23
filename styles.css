@@ -1,0 +1,55 @@
+:root {
+  --bg: #0f1419;
+  --surface: #1a2332;
+  --border: #2d3a4f;
+  --text: #e7ecf3;
+  --muted: #8b9cb3;
+  --accent: #3b82f6;
+  --danger: #ef4444;
+  --ok: #22c55e;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; }
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); background: var(--surface);
+}
+.header h1 { margin: 0; font-size: 1.25rem; }
+#user-bar { display: flex; align-items: center; gap: 0.75rem; }
+#user-bar img { border-radius: 50%; }
+.hidden { display: none !important; }
+main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;
+}
+.card h2 { margin: 0 0 1rem; font-size: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+button, .btn {
+  background: var(--accent); color: #fff; border: none; padding: 0.5rem 1rem;
+  border-radius: 6px; cursor: pointer; font-size: 0.9rem;
+}
+button.secondary { background: var(--border); }
+button.danger { background: var(--danger); }
+input, select, textarea {
+  width: 100%; padding: 0.5rem; margin-bottom: 0.75rem;
+  background: var(--bg); border: 1px solid var(--border); color: var(--text); border-radius: 6px;
+}
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+.list-item {
+  padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px;
+  cursor: pointer; transition: border-color 0.15s;
+}
+.list-item:hover, .list-item.active { border-color: var(--accent); }
+.stats { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.stat strong { display: block; font-size: 1.5rem; }
+.muted { color: var(--muted); font-size: 0.85rem; }
+.secret-box {
+  font-family: monospace; background: var(--bg); padding: 0.75rem;
+  border-radius: 6px; word-break: break-all; margin: 0.5rem 0;
+}
+.tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.tabs button { background: transparent; border: 1px solid var(--border); color: var(--text); }
+.tabs button.active { background: var(--accent); border-color: var(--accent); }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+th, td { text-align: left; padding: 0.5rem; border-bottom: 1px solid var(--border); }
